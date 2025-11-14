@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
     setOutput(""); // Limpia la salida anterior
     try{
-      const req = await axios.post('https://compilador-lobd.onrender.com',code);
+      const req = await axios.post('https://ide-compiler.onrender.com/api/ide',code);
       await setOutput(req.data.output);
     }catch (error){
       console.error("Error al enviar el código:", error);
